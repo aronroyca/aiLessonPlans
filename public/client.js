@@ -1,4 +1,5 @@
 const userForm = document.getElementById("userForm");
+const lessonPlan = document.getElementById("lessonPlan");
 
 userForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -12,5 +13,8 @@ userForm.addEventListener("submit", (e) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(userParameters),
-  });
+  })
+    .then((res) => res.json())
+    // .then((res) => console.log(res))
+    .then((res) => (lessonPlan.textContent = res.result));
 });

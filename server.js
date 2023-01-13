@@ -10,10 +10,7 @@ app.use(bp.json());
 
 app.use(express.static("./public"));
 
-app.post("/createPlan", async (req, res) => {
-  console.log("post request", req.body);
-  console.log(generate());
-});
+app.post("/createPlan", generate.openaiCall);
 
 app.listen(3000);
 console.log("app listening on port 3000");

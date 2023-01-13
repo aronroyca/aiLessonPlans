@@ -1,24 +1,27 @@
 let openailib = require("openai");
 let { Configuration, OpenAIApi } = openailib;
+let apiKey = require("../.env");
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: apiKey.apiKey,
 });
 const openai = new OpenAIApi(configuration);
 
-module.exports = async function (req, res) {
+const openaiCall = async function (req, res) {
+  console.log("post openaiCall");
   const inputs = req.body || "";
 
-  function generatePrompt(topic) {
-    const capitalizedTopic =
-      inputs[0].toUpperCase() + inputs.slice(1).toLowerCase();
-    return `Please create a 1 hour lesson plan for 5th graders about ${capitalizedTopic} which abides by california curriculum stndards.`;
+  function generatePrompt(inputs) {
+    return `Please create a 1 hour lesson plan for 5th graders about ${inputs} which abides by california curriculum stndards. Insert examples of code, diagrams, or pictures when possible. Use Madeline Hunter's template.`;
   }
 
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: generatePrompt(topic),
-    temperature: 0.6,
+    prompt: generatePrompt(inputs[0]),
+    max_tokens: 2048,
+    temperature: 0.5,
   });
   res.status(200).json({ result: completion.data.choices[0].text });
 };
+
+exports.openaiCall = openaiCall;
