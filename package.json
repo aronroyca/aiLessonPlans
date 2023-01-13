@@ -1,16 +1,24 @@
 {
-  "name": "openai-quickstart-node",
-  "version": "0.1.0",
-  "private": true,
+  "name": "chatgptpractice",
+  "version": "1.0.0",
+  "description": "This is my practice project utilizing chatGPT",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aronroyca/chatGPTPractice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aronroyca/chatGPTPractice/issues"
+  },
+  "homepage": "https://github.com/aronroyca/chatGPTPractice#readme",
   "dependencies": {
-    "next": "^13.1.1",
-    "openai": "^3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2"
   }
 }
