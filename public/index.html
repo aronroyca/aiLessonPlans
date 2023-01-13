@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
     <title>A+I Lesson Plans</title>
 </head>
 <body>
     <h1>Hello A+I Lesson Plans</h1>
+
+    <form action="/createPlan" method="post" id="userForm">
+        <input type="text" name="topic" id="planTopic">
+        <input type="text" name="grade" id="planGrade">
+        <button type="submit">Create Lesson Plan</button>
+    </form>
 
     <script src="client.js"></script>
 </body>
