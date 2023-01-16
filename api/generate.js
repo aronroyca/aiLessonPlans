@@ -8,11 +8,11 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const openaiCall = async function (req, res) {
-  console.log("post openaiCall");
   const inputs = req.body || "";
+  console.log("post openaiCall", inputs);
 
   function generatePrompt(inputs) {
-    return `Please create a 1 hour lesson plan for 5th graders about ${inputs} which abides by california curriculum stndards. Insert examples of code, diagrams, or pictures when possible. Use Madeline Hunter's template.`;
+    return `Please create a 1 hour lesson plan for 5th graders about ${inputs} which abides by california curriculum standards. Insert examples of code, diagrams, or pictures when possible. Use Madeline Hunter's template.`;
   }
 
   const completion = await openai.createCompletion({
