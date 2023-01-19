@@ -16,5 +16,5 @@ userForm.addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     // .then((res) => console.log(res))
-    .then((res) => (lessonPlan.textContent = res.result));
+    .then((res) => (lessonPlan.innerHTML = res.result));
 });
