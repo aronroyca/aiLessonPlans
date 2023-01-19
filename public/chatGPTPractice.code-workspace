@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../petAdoption"
+		},
+		{
+			"path": "../../toDoApp"
+		}
+	],
+	"settings": {}
+}
