@@ -5,28 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>A+I Lesson Plans</title>
 </head>
 <body>
-    <h1>Hello A+I Lesson Plans</h1>
-
-    <form action="/createPlan" method="post" id="userForm">
-        <p>Topic:</p>
-        <input type="text" name="topic" id="planTopic">
-        <p>Enter the grade that this lesson is meant for:</p>
-        <input type="text" name="grade" id="planGrade">
-        <p>Length of class session:</p>
-        <input type="text" name="time" id="planTime">
-        <p>State curriculum guidelines to abide by:</p>
-        <input type="text" name="state" id="planState">
-
-        <button type="submit">Create Lesson Plan</button>
-    </form>
-    <article id="lessonPlan">
-
-    </article>
-
+    <container class="container-fluid p-5 text-center d-flex flex-column">
+        <h1>A+I Lesson Plans</h1>
+        
+        <div class="d-flex justify-content-center col-12">
+            <form class="d-flex flex-column justify-content-center align-content-around" action="/createPlan" method="post"
+                id="userForm">
+                <div class="my-3">
+                    <label>Topic:</label>
+                    <input class="form-control" type="text" name="topic" id="planTopic">
+                </div>
+                <div class="mb-3">
+                    <label>Enter the grade that this lesson is meant for:</label>
+                    <input class="form-control" type="text" name="grade" id="planGrade">
+                </div>
+                <div class="mb-3">
+                    <label>Length of class session:</label>
+                    <input class="form-control" type="text" name="time" id="planTime">
+                </div>
+                <div class="mb-3">
+                    <label>State curriculum guidelines to abide by:</label>
+                    <input class="form-control" type="text" name="state" id="planState">
+                </div>
+            
+                <button class="mb-3 btn btn-primary" type="submit">Create Lesson Plan</button>
+            </form>
+        </div>
+        
+        <article class="" id="lessonPlan">
+        
+        </article>
+    </container>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
     <script src="client.js"></script>
 </body>
 </html>

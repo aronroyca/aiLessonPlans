@@ -19,7 +19,7 @@ const openaiCall = async function (req, res) {
 
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: generatePrompt(inputs[0]),
+    prompt: generatePrompt(userTopic, userGrade, userClassLength, userState),
     max_tokens: 2048,
     temperature: 0.5,
   });
