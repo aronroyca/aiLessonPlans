@@ -6,6 +6,7 @@ userForm.addEventListener("submit", (e) => {
   const userFormData = new FormData(userForm);
   const userParameters = [...userFormData.values()];
   console.log("submitted");
+  lessonPlan.innerHTML = "<h1>Generating Lesson Plan</h1>";
 
   fetch("/createPlan", {
     method: "POST",
