@@ -3,9 +3,7 @@ function Deliveredplan() {
 
        
         
-        <article class="" id="lessonPlan">
-        
-        </article>
+        <article className="" id="lessonPlan"></article>
 
     
     // <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>

@@ -1,31 +1,40 @@
+import { useState } from 'react';
+
+
 function Searchform() {
+    const [topic, setTopic] = useState("")
+    const [grade, setGrade] = useState("")
+    const [length, setLength] = useState("")
+    const [stateCurr, setStateCurr] = useState("")
+
     return (
-     <div class="d-flex justify-content-center col-12">
-            <form class="d-flex flex-column justify-content-center align-content-around" action="/createPlan" method="post"
+     <div className="d-flex justify-content-center col-12">
+            <form className="d-flex flex-column justify-content-center align-content-around" action="/createPlan" method="post"
                 id="userForm">
-                <div class="my-3">
+                <div className="my-3">
                     <label>Topic:</label>
-                    <input class="form-control" type="text" name="topic" id="planTopic"></input>
+                    <input id="planTopic" className="form-control" type="text" name="topic" value={topic} onChange={e => setTopic(e.target.value)}></input>
                 </div>
-                <div class="mb-3">
+                <div className="mb-3">
                     <label>Enter the grade that this lesson is meant for:</label>
-                    <input class="form-control" type="text" name="grade" id="planGrade"></input>
+                    <input id="planGrade" className="form-control" type="text" name="grade" value={grade} onChange={e => setGrade(e.target.value)}></input>
                 </div>
-                <div class="mb-3">
-                    <label>Length of class session:</label>
-                    <input class="form-control" type="text" name="time" id="planTime"></input>
+                <div className="mb-3">
+                    <label>Length of className session:</label>
+                    <input id="planTime" className="form-control" type="text" name="time" value={length} onChange={e => setLength(e.target.value)}></input>
                 </div>
-                <div class="mb-3">
+                <div className="mb-3">
                     <label>State curriculum guidelines to abide by:</label>
-                    <input class="form-control" type="text" name="state" id="planState"></input>
+                    <input id="planState" className="form-control" type="text" name="state" value={stateCurr} onChange={e => setStateCurr(e.target.value)}></input>
                 </div>
             
-                <button class="mb-3 btn btn-primary" type="submit">Create Lesson Plan</button>
+                <button className="mb-3 btn btn-primary" type="submit"
+                    // onSubmit={e => e.preventDefault
+
+                    // }
+                >Create Lesson Plan</button>
             </form>
         </div>
-
-    
-    /* <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>  */
     )
     
 }
