@@ -1,6 +1,14 @@
 function Deliveredplan() {
     return (
-        <div>waiting to outplun plan here</div>
+
+       
+        
+        <article class="" id="lessonPlan">
+        
+        </article>
+
+    
+    // <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
     )
     
 }
