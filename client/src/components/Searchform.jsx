@@ -8,9 +8,9 @@ function Searchform() {
     const [stateCurr, setStateCurr] = useState("")
     const [lp, setLp] = useState("");
 
-    useEffect(() => {
-        requestPlan();
-    })
+    // useEffect(() => {
+    //     requestPlan();
+    // })
 
     async function requestPlan() {
         // const userFormData = new FormData(userForm);
@@ -29,22 +29,20 @@ function Searchform() {
                 stateCurr: stateCurr
     }),
   })
-    const json = await res.json();
-    setLp(json)
+        const json = await res.json();
+        console.log(json);
+    setLp(json.result)
     }
 
     return (
     <>
      <div className="d-flex justify-content-center col-12">
             <form className="d-flex flex-column justify-content-center align-content-around" action="/createPlan" method="post"
-                id="userForm" 
-                >
-                     <form className="d-flex flex-column justify-content-center align-content-around" onSubmit={e => {
+                id="userForm" onSubmit={e => {
                 e.preventDefault();
                 requestPlan();
-            }
-                
-            }></form>
+            }}
+            >
                 <div className="my-3">
                     <label>Topic:</label>
                     <input id="planTopic" className="form-control" type="text" name="topic" value={topic} onChange={e => setTopic(e.target.value)}></input>
