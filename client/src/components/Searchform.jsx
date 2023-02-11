@@ -16,7 +16,8 @@ function Searchform() {
         // const userFormData = new FormData(userForm);
         // const userParameters = [...userFormData.values()];
          console.log("submitted");
-        const res = await fetch("/createPlan", {
+        const res = await fetch("http://localhost:3030/createPlan", {
+    mode: "cors",        
     method: "POST",
     headers: {
       "Content-Type": "application/json",
