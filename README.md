@@ -1,6 +1,4 @@
-# chatGPTPractice
-
-This is my practice project utilizing chatGPT
+This is a project utilizing AI to create dynamic lesson plans.
 
 # OpenAI API Quickstart - Node.js example app
 
