@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-This is an application that utilized AI to generate custom lesson plans.
-=======
+
 This is a project utilizing AI to create dynamic lesson plans.
->>>>>>> 4b7d1c1de71efd01a1de6722778a813babee344b
 
 # OpenAI API Quickstart - Node.js example app
 
