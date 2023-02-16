@@ -67,7 +67,7 @@ function Searchform() {
                 >Create Lesson Plan</button>
             </form>
         </div>
-            <article className="" id="lessonPlan">{lp}</article>
+            <article className="" id="lessonPlan">{ lp }</article>
     </>
     )
     
