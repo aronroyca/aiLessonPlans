@@ -14,7 +14,7 @@ const openaiCall = async function (req, res) {
   console.log(topic, grade, length, stateCurr);
 
   function generatePrompt(topic, grade, length, stateCurr) {
-    return `Please create a ${length} hour lesson plan for ${grade} about ${topic}, which abides by ${stateCurr} curriculum standards. Use Madeline Hunter's template.`;
+    return `Please create a ${length} hour lesson plan for ${grade} about ${topic}, which abides by ${stateCurr} curriculum standards. Use Madeline Hunter's template. Format the response as html`;
     // return `Create a lesson plan for chapter 5  in the book with the isbn 9780153121012. Format the lesson with html5. Utilize Madeline Hunter's lesson plan style`;
     //     `Please create a ${userClassLength} hour lesson plan for ${userGrade} about ${userTopic}, which abides by ${userState} curriculum standards. Use Madeline Hunter's template. Please format the document using html5.
 
