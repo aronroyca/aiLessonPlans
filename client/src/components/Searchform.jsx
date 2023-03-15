@@ -52,7 +52,7 @@ function Searchform() {
                     <input id="planGrade" className="form-control" type="text" name="grade" value={grade} onChange={e => setGrade(e.target.value)}></input>
                 </div>
                 <div className="mb-3">
-                    <label>Length of className session:</label>
+                    <label>Length of class session:</label>
                     <input id="planTime" className="form-control" type="text" name="time" value={length} onChange={e => setLength(e.target.value)}></input>
                 </div>
                 <div className="mb-3">
