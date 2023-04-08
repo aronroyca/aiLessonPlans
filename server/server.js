@@ -3,7 +3,7 @@ const express = require("express");
 const bp = require("body-parser");
 const cors = require('cors');
 
-const mongoose = require('mongoose');
+const database = require('./database.js');
 const generate = require("../api/generate.js");
 
 const app = express();
@@ -13,9 +13,6 @@ app.use(cors())
 
 app.use(express.static("./public"));
 
-const connect = () => {
-    return mongoose.connect('mongodb://localhost:27017/todos')
-}
 
 app.post("/createPlan", generate.openaiCall);
 
