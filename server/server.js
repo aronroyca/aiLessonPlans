@@ -4,7 +4,7 @@ const bp = require("body-parser");
 const cors = require('cors');
 
 
-const generate = require("./api/generate.js");
+const generate = require("../api/generate.js");
 
 const app = express();
 app.use(bp.urlencoded({ extended: true }));
