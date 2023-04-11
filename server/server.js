@@ -13,7 +13,10 @@ app.use(cors())
 
 app.use(express.static("./public"));
 
-
+app.post("/signin", (req, res) => {
+    console.log('request made')
+    res.json('this is your response')
+});
 app.post("/createPlan", generate.openaiCall);
 
 app.listen(3030);

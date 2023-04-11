@@ -62,11 +62,7 @@ function Searchform() {
                     <input id="planState" className="form-control" placeholder='ex. California' type="text" name="state" value={stateCurr} onChange={e => setStateCurr(e.target.value)}></input>
                 </div>
             
-                <button className="mb-3 btn btn-primary" type="submit"
-                    // onSubmit={e => e.preventDefault
-
-                    // }
-                >Create Lesson Plan</button>
+                <button className="mb-3 btn btn-primary" type="submit">Create Lesson Plan</button>
             </form>
         </div>
             <article className="lp" id="lessonPlan"  dangerouslySetInnerHTML={createMarkup(lp)}></article>

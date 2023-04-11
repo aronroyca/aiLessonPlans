@@ -6,9 +6,9 @@ function LandingPage() {
 
     async function signIn() {
         console.log('Signing in!')
-        const res = await fetch("http://localhost:3030/signIn", {
+        const res = await fetch("http://localhost:3030/signin", {
     mode: "cors",        
-    method: "GET",
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
@@ -25,7 +25,7 @@ function LandingPage() {
         <section>
             <h1>This is the homepage!</h1>
             <div id='signinForm' className="d-flex justify-content-center col-12">
-            <form className="d-flex flex-column justify-content-center align-content-around" action="/login" method="get"
+            <form className="d-flex flex-column justify-content-center align-content-around" action="/signin" method="get"
                 id="signinForm" onSubmit={e => {
                     e.preventDefault();
                     signIn();

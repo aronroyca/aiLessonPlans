@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path='/' element={<LandingPage />}></Route>
-        <Route exact path='/generate' element={<Searchform />}></Route>
+        <Route exact path='/createPlan' element={<Searchform />}></Route>
       </Routes>
       
     </Router>
