@@ -2,7 +2,7 @@ import React from "react";
 
 function LandingPage() {
     return (
-        <h1>Hello World!</h1>
+        <h1>This is the homepage!</h1>
     )
 }
 
