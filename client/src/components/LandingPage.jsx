@@ -4,13 +4,31 @@ function LandingPage() {
     const [signinUsername, setsigninUsername] = useState("")
     const [signinPassword, setsigninPassword] = useState("")
 
+    async function signIn() {
+        console.log('Signing in!')
+        const res = await fetch("http://localhost:3030/signIn", {
+    mode: "cors",        
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+            body: JSON.stringify({
+                username: signinUsername,
+                passwoord: signinPassword
+    }),
+        })
+        const json = await res.json();
+        console.log(json)
+    }
+
     return (
         <section>
             <h1>This is the homepage!</h1>
             <div id='signinForm' className="d-flex justify-content-center col-12">
             <form className="d-flex flex-column justify-content-center align-content-around" action="/login" method="get"
                 id="signinForm" onSubmit={e => {
-                e.preventDefault();
+                    e.preventDefault();
+                    signIn();
             }}
             >
                 <div className="my-3">
