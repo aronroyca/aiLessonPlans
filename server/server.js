@@ -3,7 +3,7 @@ const express = require("express");
 const bp = require("body-parser");
 const cors = require('cors');
 
-const database = require('./database.js');
+const database = require('./config/db_connection');
 const generate = require("../api/generate.js");
 
 const app = express();

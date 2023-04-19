@@ -8,8 +8,7 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
-})
-const User = mongoose.model('User', userSchema)
-
-exports.User = User
+    }},
+    {timestamps: true}
+)
+module.exports = mongoose.model('User', userSchema)
